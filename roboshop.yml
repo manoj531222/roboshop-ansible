@@ -1,4 +1,5 @@
 - name: roboshop-project
   hosts: all
+  remote_src: yes
   roles:
     - "{{ role_name }}"
