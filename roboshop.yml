@@ -1,5 +1,5 @@
 - name: roboshop-project
   hosts: all
-  become: yes
+  become: yes  # to run as a sudo user
   roles:
     - "{{ role_name }}"

@@ -22,10 +22,10 @@
   ansible.builtin.unarchive:
     src: https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
     dest: /usr/share/nginx/html
-    remote_src: yes
+    remote_src: yes  # to download content from remote location
 
 - name: Start Nginx
   ansible.builtin.systemd:
     state: restarted
     name: nginx
-    enabled: true
+    enabled: true  # systemctl enabled
