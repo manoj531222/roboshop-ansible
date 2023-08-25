@@ -1,5 +1,5 @@
 - name: install maven
-  ansible:builtin:yum:
+  ansible.builtin.yum:
     name: maven
 
 - name: include app_prereq
