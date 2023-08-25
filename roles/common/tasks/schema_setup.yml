@@ -17,11 +17,6 @@
 - name: load mysql schema
   when: schema_setup == "mysql"
   block:
-    - name: copy mongodb repo file
-      ansible.builtin.copy:
-        src: mongo.repo
-        dest: /etc/yum.repos.d/mysql.repo
-
     - name: Install MySQL Client
       ansible.builtin.yum:
         - name: mysql
