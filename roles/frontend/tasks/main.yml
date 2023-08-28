@@ -30,7 +30,7 @@
     name: nginx
     enabled: true  # systemctl enabled
 
-- name: import filebeat
+- name: Import Filebeat
   ansible.builtin.import_role:
     name: elk
     tasks_from: filebeat
