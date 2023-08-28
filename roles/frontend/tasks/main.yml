@@ -29,8 +29,8 @@
     state: restarted
     name: nginx
     enabled: true  # systemctl enabled
-
-- name: import filebeat
-  ansible.builtin.import_role:
-    name: elk
-    tasks_from: filebeat
+#
+#- name: import filebeat
+#  ansible.builtin.import_role:
+#    name: elk
+#    tasks_from: filebeat
