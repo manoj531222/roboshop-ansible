@@ -26,5 +26,5 @@ scrape_configs:
 
   - job_name: "ec2_nodes"
     static_configs:
-      - targets: ["172.31.91.226:9100"]
+      - targets: ["172.31.88.251:9100"]
 
