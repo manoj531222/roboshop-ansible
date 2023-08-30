@@ -32,3 +32,4 @@ scrape_configs:
           - name: tag:Monitor
             values: [ "true" ]
 
+
