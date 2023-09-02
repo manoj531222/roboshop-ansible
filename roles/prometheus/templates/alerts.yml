@@ -14,7 +14,7 @@ groups:
         labels:
           severity: page
         annotations:
-          summary: High Memoory Usage
+          summary: High Memory Usage
       - alert: ServerDown
         expr: up < 1
         for: 1m
