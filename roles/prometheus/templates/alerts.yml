@@ -15,3 +15,10 @@ groups:
           severity: page
         annotations:
           summary: High Memoory Usage
+      - alert: ServerDown
+        expr: up < 1
+        for: 1m
+        labels:
+          severity: page
+        annotations:
+          summary: Server Down
