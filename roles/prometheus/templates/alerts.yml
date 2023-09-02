@@ -23,6 +23,7 @@ groups:
           severity: page
         annotations:
            summary: Server Down
+
      { % for component in components % }
 
       - alert: ServiceDown-{{component.name}}
