@@ -15,4 +15,4 @@ groups:
     labels:
       severity: page
     annotations:
-      summary: High Memoory Usage
+      summary: High Memory Usage
