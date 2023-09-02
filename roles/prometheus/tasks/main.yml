@@ -1,4 +1,4 @@
-- name: copy prometheus.yml file
+- name: Copy Prometheus Configuration
   ansible.builtin.template:
     src: "{{item}}.yml"
     dest: /opt/prometheus/{{item}}.yml
@@ -6,7 +6,7 @@
     - prometheus
     - alerts
 
-- name: restart prometheus
+- name: Restart Prometheus
   ansible.builtin.systemd:
     name: prometheus
     state: restarted
