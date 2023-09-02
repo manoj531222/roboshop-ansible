@@ -8,3 +8,30 @@ groups:
           severity: page
         annotations:
           summary: High request latency
+
+      - alert: Highmemory Utilization
+        expr: 100-(100 * ((node_memory_MemFree_bytes+ node_memory_Cached_bytes+node_memory_Buffers_bytes)/node_memory_MemTotal_bytes))>50
+        for: 1m
+        labels:
+          severity: page
+        annotations:
+          summary: High memory utilization
+
+      - alert: serverup
+        expr: up < 1
+        for: 1m
+        labels:
+          severity: page
+        annotations:
+          summary: serverup
+
+
+      {% for label in labels %}
+      - alert: servicedown
+        expr: node_systemd_unit_state{component="cart",exported_name="cart.service",state="active"} < 1
+        for: 1m
+        labels:
+          severity: page
+        annotations:
+          summary: {{ }} component - servicedown
+      {%- endfor %}
