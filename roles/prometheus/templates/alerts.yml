@@ -23,13 +23,13 @@ groups:
         annotations:
           summary: Server Down
 
-      - alert: ServerDown
-          expr: up < 1
-          for: 1m
-          labels:
-            severity: page
-          annotations:
-            summary: Server Down
+      - alert: ServiceDown
+        expr: up < 1
+        for: 1m
+        labels:
+          severity: page
+        annotations:
+          summary: Service Down
         { % for component in components % }
 
         - alert: ServiceDown-{{component.name}}
