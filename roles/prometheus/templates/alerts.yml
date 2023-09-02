@@ -9,10 +9,10 @@ groups:
         annotations:
           summary: High CPU Usage
 
-  - alert: HighMemoryUtilization
-    expr: 100 - (100 * ((node_memory_MemFree_bytes + node_memory_Cached_bytes + node_memory_Buffers_bytes )  / node_memory_MemTotal_bytes)) > 50
-    for: 1m
-    labels:
-      severity: page
-    annotations:
-      summary: High Memory Usage
+      - alert: HighMemoryUtilization
+        expr: 100 - (100 * ((node_memory_MemFree_bytes + node_memory_Cached_bytes + node_memory_Buffers_bytes )  / node_memory_MemTotal_bytes)) > 50
+        for: 1m
+        labels:
+          severity: page
+        annotations:
+          summary: High Memory Usage
